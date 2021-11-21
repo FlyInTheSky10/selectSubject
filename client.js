@@ -30,7 +30,7 @@ function submitData() {
 	if (flag && nowTime.getTime() - lastTime.getTime() <= 2000) {
 		alert("slow!");
 	} else {
-		ajax("POST", "http://127.0.0.1:3000", encodeString.substring(0, encodeString.length - 1));	
+		ajax("POST", window.location.href, encodeString.substring(0, encodeString.length - 1));	
 		lastTime = new Date();
 		flag = 1;
 	}

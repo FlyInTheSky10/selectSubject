@@ -45,12 +45,12 @@ let server = http.createServer((req, res) => { // req: 请求数据，res：输�
 			return ;
 		}
 		let {name, id, fx} = qs.parse(data);
-		console.log(`name: ${name}, id: ${id}, fx: ${fx}`);
 		if (!name || !id || !fx) {
 			res.write("missing params");
 			res.end();
 			return ;
 		}
+		console.log(`name: ${name}, id: ${id}, fx: ${fx}`);
 		res.writeHead(200, {
 			"Content-Type": "text/plain",
 			"Access-Control-Allow-Origin": "*"
